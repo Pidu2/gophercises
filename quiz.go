@@ -15,6 +15,8 @@ func main() {
 
 	questions := readQuestions(csvFlagPtr)
 
+	fmt.Println("Press Enter when ready")
+	fmt.Scanln()
 	timer := time.NewTimer(time.Duration(*limitFlagPtr) * time.Second)
 
 	stats := askQuestions(questions, timer)
