@@ -1,0 +1,11 @@
+<h1>{{ .Title }}</h1>
+{{ range .Story }}
+<p>{{ . }}</p>
+{{ end }}
+<body>
+    <form>
+        {{ range .Options}}
+        <input type="button" value="{{ .Text }}"onclick="window.location.href = '{{ .Arc }}'"/>
+        {{ end }}
+    </form>
+</body>
